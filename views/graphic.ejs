@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header'); %>
+
+    </header>
+    <main>
+        
+            <div class="text-center">
+                <p >
+                    <%= moyenne %>
+                </p>
+                <p>
+                    <%= ecartType %>
+                </p>
+            </div>
+
+            <div>
+                <canvas style="height: 600px; width: 1000px; margin-left: auto; margin-right: auto;" id="myChart"></canvas>
+            </div>
+            
+            <div>
+                <form action="http://localhost:3005/titanic" method="get">
+                    <div class="d-flex justify-content-center form-example">
+                        <input class="btn btn-outline-primary" type="submit" value="Reset">
+                    </div>
+                </form>
+            </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        var Config = JSON.parse(`<%- JSON.stringify(config) %>`);
+        var ddata = Config.data.datasets[0].data
+
+        var labelsData = [];
+        for (var i = 0; i < Config.data.labels.length; i++) {
+            labelsData.push(Config.data.labels[i]);
+        }
+
+        let pchart = new Chart(myChart, {
+            type: 'bar',
+            data: {
+                labels: labelsData,
+
+                datasets: [
+                    {
+                        label: `<%- label %>`,
+                        data: ddata,
+                        order: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

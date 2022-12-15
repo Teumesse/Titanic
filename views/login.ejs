@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark">
+            <div class="container">
+                <div class="">
+                    <img style="display: block; margin-left: auto;
+                    margin-right: auto; ;" src="../img/ship.png">
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="bg-white border rounded-5">
+
+            <section class="w-100 p-4 d-flex justify-content-center pb-4">
+                <form action="http://localhost:3005/verifUser" method="POST" style="width: 22rem;">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" name="email" id="form2Example1" class="form-control" required/>
+                        <label class="form-label" for="form2Example1">Email address</label>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input name="password" type="password" id="form2Example2" class="form-control" required/>
+                        <label class="form-label" for="form2Example2">Password</label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Sign in" class="btn btn-primary btn-block mb-4">
+                </form>
+            </section>
+        </div>
+
+    </main>
+</body>
+
+</html>

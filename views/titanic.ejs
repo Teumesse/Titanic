@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+    <main>
+        <!-- <img src="./img/GraphSex.png" alt=""> -->
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col rounded">
+                        <div class="card shadow-sm">
+                            <img src="./img/GraphSex.png" alt="">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">Nombre de survivantes en fonction de leurs sexes</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form action="http://localhost:3005/titanic/research/sex" method="POST">
+                                            <div class="form-example">
+                                                <input class="btn btn-sm btn-outline-secondary" type="submit"
+                                                    value="View">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col rounded">
+                        <div class="card shadow-sm">
+                            <img src="./img/GraphAge.png" alt="">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">Nombre de survivantes en fonction de leurs
+                                    ages</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form action="http://localhost:3005/titanic/research/age" method="POST">
+                                            <div class="form-example">
+                                                <input class="btn btn-sm btn-outline-secondary" type="submit"
+                                                    value="View">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col rounded">
+                        <div class="card shadow-sm">
+                            <img src="./img/GraphClasse.png" alt="">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">Nombre de survivantes en fonction de leurs classes</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form action="http://localhost:3005/titanic/research/classe" method="POST">
+                                            <div class="form-example">
+                                                <input class="btn btn-sm btn-outline-secondary" type="submit"
+                                                    value="View">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col rounded">
+                        <div class="card shadow-sm">
+                            <img src="./img/GraphSexClasse.png" alt="">
+
+                            <div class="card-body">
+                                <p class="card-text text-center">Nombre de survivantes en fonction de leurs sexes et
+                                    classes</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <form action="http://localhost:3005/titanic/research/SexEtClasse" method="POST">
+                                            <div class="form-example">
+                                                <input class="btn btn-sm btn-outline-secondary" type="submit"
+                                                    value="View">
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+    </main>
+
+</body>
+
+</html>
